@@ -12,4 +12,20 @@ class Intervention {
     this.note,
     required this.mileage,
   });
+
+  Map<String, dynamic> toJson() => {
+    'id': id,
+    'type': type,
+    'date': date.toIso8601String(),
+    'note': note,
+    'mileage': mileage,
+  };
+
+  factory Intervention.fromJson(Map<String, dynamic> json) => Intervention(
+    id: json['id'],
+    type: json['type'],
+    date: DateTime.parse(json['date']),
+    note: json['note'],
+    mileage: json['mileage'],
+  );
 }

@@ -5,7 +5,7 @@ class AppTheme {
 
   static const Color background = Color(0xFFF8F7F4);
   static const Color surface = Color(0xFFFFFFFF);
-  static const Color accent = Color(0xFFD4621A);
+  static const Color accent = Color(0xFF1A7A4A);
   static const Color textPrimary = Color(0xFF1A1A1A);
   static const Color textSecondary = Color(0xFF8A8A8A);
   static const Color border = Color(0xFFE8E6E1);

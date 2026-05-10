@@ -16,4 +16,24 @@ class Vehicle {
     required this.mileage,
     this.interventions = const [],
   });
+
+  Map<String, dynamic> toJson() => {
+    'id': id,
+    'brand': brand,
+    'name': name,
+    'year': year,
+    'mileage': mileage,
+    'interventions': interventions.map((i) => i.toJson()).toList(),
+  };
+
+  factory Vehicle.fromJson(Map<String, dynamic> json) => Vehicle(
+    id: json['id'],
+    brand: json['brand'],
+    name: json['name'],
+    year: json['year'],
+    mileage: json['mileage'],
+    interventions: (json['interventions'] as List)
+        .map((i) => Intervention.fromJson(i))
+        .toList(),
+  );
 }
